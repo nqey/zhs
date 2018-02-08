@@ -1,0 +1,6 @@
+@CHARSET "utf-8";
+
+@IMPORT url("../plugins/bootstrap/css/bootstrap.min.css");
+@IMPORT url("../plugins/jquery-bxslider/css/jquery.bxslider.css");
+@IMPORT url("../plugins/dropload/dropload.css");
+@IMPORT url("./style.css");

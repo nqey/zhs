@@ -1,0 +1,20 @@
+<!-- 商品信息 -->
+<%_.$.each(data,function(k,v){%>
+  <ul>
+    <li>
+      <div class="row clearfix">
+        <div class="col-xs-4">
+          <a  href="<%=v.url%>">
+            <img src="<%=_.config.getPictureUrl(v.imageList[0])%>" alt="" />
+          </a>
+        </div>
+        <div class="col-xs-8">
+          <strong><%=v.title%></strong>
+          <p><%=v.subTitle%></p>
+        </div>
+      </div>
+      <span>证</span>
+    </li>
+  </ul>
+<%})%>
+

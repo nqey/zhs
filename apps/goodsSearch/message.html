@@ -1,0 +1,21 @@
+<%_.$.each(data, function(k, v){%>
+<div class="gs-list">
+    <ul>
+      <li>
+        <div class="row clearfix">
+          <div class="col-xs-4">
+            <a  href="<%=v.url%>">
+              <img src="<%=_.config.getPictureUrl(v.imageList[0])%>" alt="" />
+            </a>
+          </div>
+          <div class="col-xs-8">
+            <h4><%=v.title%></h4>
+            <p><%=v.subTitle%></p>
+          </div>
+        </div>
+        <div class="gs-evidence"><span style="line-height: 30px;">证</span></div>
+      </li>
+    </ul>
+</div>
+<%})%>
+

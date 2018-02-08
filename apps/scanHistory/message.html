@@ -1,0 +1,26 @@
+<%_.$.each(data, function(k, v){%>
+<div class="smls_list">
+	<ul>
+	  <li>
+	    <div class="smls_select">
+	      <div data-id="<%=v.id%>" class="smls_check" ></div>
+	    </div>
+	    <div class="smls_item">
+		    <div class="col-xs-4">
+			    <a href="<%=v.url%>">
+			      <img src="<%=_.config.getPictureUrl(v.imageList[0])%>" alt="" />
+			    </a>
+		    </div>
+		    <div class="col-xs-8"> <h4><%=v.title%></h4>
+		      <p><%=v.subTitle%></p>
+		    </div>
+	    </div>
+	    <div style="clear:both;"></div>
+	    <div class="evidence"><span style="line-height: 30px;">证</span><div>
+	  </li>
+	</ul>
+</div>
+<%})%>
+
+
+

@@ -1,0 +1,19 @@
+<div class="gcxq_bj">
+  <h4><%=data.factoryName%></h4>
+  <div class="gcxq_dz">
+    <p><img src="../../css/img/fuh.png" /><%=data.address%></p>
+    <p><img src="../../css/img/tell.png" /><%=data.tel%></p>
+  </div>
+  </div>
+  <div class="spxq_bottom">
+  <h4>承诺函</h4>
+  <div class="spxq_bottom_content"> <img src="<%=_.config.getPictureUrl(data.images.promise[0])%>" alt="" /> </div>
+  </div>
+  <div class="spxq_bottom">
+  <h4>工厂环境</h4>
+  <div class="slider">
+    <%_.$.each(data.images.qualification, function(k, v){%>
+      <div class="slide"><img src="<%=_.config.getPictureUrl(v)%>" alt="" /></div>
+    <%})%>
+  </div>
+</div>

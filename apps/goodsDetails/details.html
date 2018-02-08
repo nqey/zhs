@@ -1,0 +1,58 @@
+<div style="position: relative;">
+  <h4 style="position: absolute;width: 100%;text-align: center;z-index: 999;color: #fff;"><%=data.title%></h4>
+  <div id='gd-swipe' class='swipe'>
+     <div class='swipe-wrap'>
+       <%_.$.each(data.imageList, function(k, v){%>
+         <span><img src="<%=_.config.getPictureUrl(v)%>" alt="" /></span>
+       <%})%>
+     </div>
+    <ul id="position">
+      <li class="on"></li>
+      <%for(var i=0; i<data.imageList.length - 1; i++) {%>
+      <li class></li>
+      <%}%>
+    </ul>
+  </div>
+</div>
+<div class="spxq_bottom">
+  <h4>属性</h4>
+  <%_.$.each(data.attributes, function(k, v){%>
+    <p><%=v.attributeName%>：<%=v.attributeValue%></p>
+  <%})%>
+</div>
+<div class="spxq_bottom">
+  <h4>规格参数</h4>
+  <%_.$.each(data.properties, function(k1, v1){%>
+    <%_.$.each(v1, function(k2, v2){%>
+      <p><%=k2%>：<%=v2%></p>
+    <%})%>
+  <%})%>
+</div>
+<div class="spxq_bottom">
+  <h4>资质证书</h4>
+  <div class="slider">
+    <%_.$.each(data.certification.qualification, function(k, v){%>
+      <div class="slide"><img src="<%=_.config.getPictureUrl(v)%>" alt="" /></div>
+    <%})%>
+  </div>
+</div>
+<div class="spxq_bottom">
+  <h4>商品介绍</h4>
+  <div>
+    <%=data.description%>
+  </div>
+</div>
+<% if("factoryList" in data) {%>
+<div class="spxq_bottom">
+  <h4>工厂展示</h4>
+  <div class="slider">
+    <%_.$.each(data.factoryList, function(k, v){%>
+    <div class="slide">
+      <a href="<%=v.url%>">
+        <img src="<%=_.config.getPictureUrl(v.images.main[0])%>" alt="" />
+      </a>
+    </div>
+    <%})%>
+  </div>
+</div>
+<%}%>
