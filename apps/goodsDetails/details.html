@@ -3,7 +3,7 @@
   <div id='gd-swipe' class='swipe'>
      <div class='swipe-wrap'>
        <%_.$.each(data.imageList, function(k, v){%>
-         <span><img src="<%=_.config.getPictureUrl(v)%>" alt="" /></span>
+         <span><img src="<%=_.config.getPictureUrl(v,[300,400])%>" alt="" /></span>
        <%})%>
      </div>
     <ul id="position">
@@ -32,7 +32,7 @@
   <h4>资质证书</h4>
   <div class="slider">
     <%_.$.each(data.certification.qualification, function(k, v){%>
-      <div class="slide"><img src="<%=_.config.getPictureUrl(v)%>" alt="" /></div>
+      <div class="slide"><img src="<%=_.config.getPictureUrl(v,[300,400])%>" alt="" /></div>
     <%})%>
   </div>
 </div>
@@ -49,7 +49,7 @@
     <%_.$.each(data.factoryList, function(k, v){%>
     <div class="slide">
       <a href="<%=v.url%>">
-        <img src="<%=_.config.getPictureUrl(v.images.main[0])%>" alt="" />
+        <img src="<%=_.config.getPictureUrl(v.images.main[0],[300,400])%>" alt="" />
       </a>
     </div>
     <%})%>

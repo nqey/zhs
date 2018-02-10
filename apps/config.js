@@ -14,29 +14,11 @@ define('config', [], function () {
          * 获取图片的全路径
          * @param url ： 图片地址
          * @param quality ： s-小图；m-中图；x-大图；不填-原图
-         * @param size ： {width:100;height:100}
+         * @param size ： [height, width]
          */
-        getPictureUrl: function (url, quality, size) {
-            //TODO:待完善
+        getPictureUrl: function (url, size) {
             if (typeof url == "string") {
-                return this.IMAGE_SERVER_URL + url + (quality ? ('?q=' + __quality[quality]) : '');
-            } else {
-                var r = [];
-                $.each(url, function (k, v) {
-                    r.push(this.IMAGE_SERVER_URL + v + (quality ? ('?q=' + __quality[quality]) : ''));
-                })
-                return r;
-            }
-
-            //TODO:待完善
-            if (typeof url == "string") {
-                return this.IMAGE_SERVER_URL + url;
-            } else {
-                var r = [];
-                $.each(url, function (k, v) {
-                    r.push(this.IMAGE_SERVER_URL + url);
-                })
-                return r;
+                return this.IMAGE_SERVER_URL + url + (size ? ('?h=' + size[0] + '&w=' + size[1]) : '');
             }
         },
         /**

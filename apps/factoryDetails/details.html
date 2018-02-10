@@ -13,7 +13,7 @@
   <h4>工厂环境</h4>
   <div class="slider">
     <%_.$.each(data.images.qualification, function(k, v){%>
-      <div class="slide"><img src="<%=_.config.getPictureUrl(v)%>" alt="" /></div>
+      <div class="slide"><img src="<%=_.config.getPictureUrl(v,[300,400])%>" alt="" /></div>
     <%})%>
   </div>
 </div>

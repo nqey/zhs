@@ -61,6 +61,9 @@ define([
                 },
                 success: function (res) {
                     if (res.data.length == 0) {
+                        if (option.urlParams.page === 1) {
+                          option.listDom.html("没有扫描历史");
+                        }
                         // 锁定
                         option.dropload.lock();
                         // 无数据
